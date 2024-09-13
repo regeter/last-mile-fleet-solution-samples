@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.backend.BackendConfigServletTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-09-13T01:34:23" hostname="regeter-mac.roam.internal" time="31.077">
+  <properties/>
+  <testcase name="handlesBackendConfigUpload" classname="com.example.backend.BackendConfigServletTest" time="31.073"/>
+  <testcase name="doesNotImplementGet" classname="com.example.backend.BackendConfigServletTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Sep 12, 2024 6:34:23 PM com.google.auth.oauth2.DefaultCredentialsProvider warnAboutProblematicCredentials
+WARNING: Your application has authenticated using end user credentials from Google Cloud SDK. We recommend that most server applications use service accounts instead. If your application continues to use end user credentials from Cloud SDK, you might receive a "quota exceeded" or "API not enabled" error. For more information about service accounts, see https://cloud.google.com/docs/authentication/.
+Sep 12, 2024 6:34:28 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/deliveryVehicles/vehicle_1_1726191263294"
+last_location {
+  location {
+    latitude: 37.4231623
+    longitude: -122.0925322
+  }
+  server_time {
+    seconds: 1726191267
+    nanos: 649220000
+  }
+}
+type: AUTO
+
+Sep 12, 2024 6:34:32 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_1_1726191263294"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_1_1726191263294"
+planned_location {
+  point {
+    latitude: 37.41937
+    longitude: -122.08882
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:34:36 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_2_1726191263294"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_2_1726191263294"
+planned_location {
+  point {
+    latitude: 37.41965
+    longitude: -122.08806
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:34:37 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_3_1726191263294"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_3_1726191263294"
+planned_location {
+  point {
+    latitude: 37.41857
+    longitude: -122.08781
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:34:41 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_4_1726191263294"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_4_1726191263294"
+planned_location {
+  point {
+    latitude: 37.41975
+    longitude: -122.08195
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:34:42 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_5_1726191263294"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_5_1726191263294"
+planned_location {
+  point {
+    latitude: 37.41911
+    longitude: -122.08188
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:34:43 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_6_1726191263294"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_6_1726191263294"
+planned_location {
+  point {
+    latitude: 37.41928
+    longitude: -122.08147
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:34:47 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_7_1726191263294"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_7_1726191263294"
+planned_location {
+  point {
+    latitude: 37.4258363
+    longitude: -122.0722928
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:34:51 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_8_1726191263294"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_8_1726191263294"
+planned_location {
+  point {
+    latitude: 37.4258363
+    longitude: -122.0722928
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:34:52 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_9_1726191263294"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_9_1726191263294"
+planned_location {
+  point {
+    latitude: 37.4182488
+    longitude: -122.0733413
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:34:54 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: org.springframework.mock.web.MockHttpServletResponse@7327a447
+]]></system-err>
+</testsuite>

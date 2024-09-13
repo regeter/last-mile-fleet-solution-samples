@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.example.backend.DeliveryVehicleServletTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.example.backend.DeliveryVehicleServletTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.backend.html">com.example.backend</a> &gt; DeliveryVehicleServletTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.019s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">stopPostWhenVehicleIdIsInvalid</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">stopsGetWhenNoVehicleIdIsSupplied</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">stopsGetWhenVehicleIdIsInvalid</td>
+<td class="success">0.017s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">stopsPostWhenNoVehicleIdIsSupplied</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Sep 12, 2024 6:34:54 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: &quot;providers/geod-support-gems/deliveryVehicles/vehicle_1_1726191294113&quot;
+last_location {
+  location {
+    latitude: 37.4231623
+    longitude: -122.0925322
+  }
+  server_time {
+    seconds: 1726191294
+    nanos: 653234000
+  }
+}
+type: AUTO
+
+Sep 12, 2024 6:34:59 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: &quot;providers/geod-support-gems/tasks/task_1_1726191294113&quot;
+type: DELIVERY
+state: OPEN
+tracking_id: &quot;tracking_1_1726191294113&quot;
+planned_location {
+  point {
+    latitude: 37.41937
+    longitude: -122.08882
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:02 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: &quot;providers/geod-support-gems/tasks/task_2_1726191294113&quot;
+type: PICKUP
+state: OPEN
+tracking_id: &quot;tracking_2_1726191294113&quot;
+planned_location {
+  point {
+    latitude: 37.41965
+    longitude: -122.08806
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:07 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: &quot;providers/geod-support-gems/tasks/task_3_1726191294113&quot;
+type: DELIVERY
+state: OPEN
+tracking_id: &quot;tracking_3_1726191294113&quot;
+planned_location {
+  point {
+    latitude: 37.41857
+    longitude: -122.08781
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:08 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: &quot;providers/geod-support-gems/tasks/task_4_1726191294113&quot;
+type: PICKUP
+state: OPEN
+tracking_id: &quot;tracking_4_1726191294113&quot;
+planned_location {
+  point {
+    latitude: 37.41975
+    longitude: -122.08195
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:12 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: &quot;providers/geod-support-gems/tasks/task_5_1726191294113&quot;
+type: DELIVERY
+state: OPEN
+tracking_id: &quot;tracking_5_1726191294113&quot;
+planned_location {
+  point {
+    latitude: 37.41911
+    longitude: -122.08188
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:13 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: &quot;providers/geod-support-gems/tasks/task_6_1726191294113&quot;
+type: DELIVERY
+state: OPEN
+tracking_id: &quot;tracking_6_1726191294113&quot;
+planned_location {
+  point {
+    latitude: 37.41928
+    longitude: -122.08147
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:18 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: &quot;providers/geod-support-gems/tasks/task_7_1726191294113&quot;
+type: DELIVERY
+state: OPEN
+tracking_id: &quot;tracking_7_1726191294113&quot;
+planned_location {
+  point {
+    latitude: 37.4258363
+    longitude: -122.0722928
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:18 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: &quot;providers/geod-support-gems/tasks/task_8_1726191294113&quot;
+type: DELIVERY
+state: OPEN
+tracking_id: &quot;tracking_8_1726191294113&quot;
+planned_location {
+  point {
+    latitude: 37.4258363
+    longitude: -122.0722928
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:22 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: &quot;providers/geod-support-gems/tasks/task_9_1726191294113&quot;
+type: PICKUP
+state: OPEN
+tracking_id: &quot;tracking_9_1726191294113&quot;
+planned_location {
+  point {
+    latitude: 37.4182488
+    longitude: -122.0733413
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:24 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: org.springframework.mock.web.MockHttpServletResponse@4eaa375c
+Sep 12, 2024 6:35:24 PM com.example.backend.DeliveryVehicleServlet doGet
+WARNING: The client attempted to request a non-existent vehicle
+Sep 12, 2024 6:35:24 PM com.example.backend.DeliveryVehicleServlet doPost
+WARNING: The client requested a delivery vehicle update, but the vehicle ID fake_vehicle_id does not match any vehicle.
+Sep 12, 2024 6:35:24 PM com.example.backend.DeliveryVehicleServlet doPost
+WARNING: The client requested a delivery vehicle update but did not supply a vehicleId.
+Sep 12, 2024 6:35:24 PM com.example.backend.DeliveryVehicleServlet doGet
+WARNING: The client attempted to get a vehicle without specifying its ID
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.4</a> at Sep 12, 2024, 6:36:20 PM</p>
+</div>
+</div>
+</body>
+</html>

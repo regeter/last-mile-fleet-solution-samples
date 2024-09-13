@@ -1,0 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'LMFSDriverSampleApp' do
+  project 'LMFSDriverSampleApp'
+  platform :ios, '15.0'
+
+  pod 'GoogleRidesharingDriver'
+  pod 'GoogleNavigation', '~> 4.4'
+end

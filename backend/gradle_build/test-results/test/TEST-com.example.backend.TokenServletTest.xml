@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.backend.TokenServletTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-09-13T01:36:10" hostname="regeter-mac.roam.internal" time="0.434">
+  <properties/>
+  <testcase name="fetchesDeliveryConsumerToken" classname="com.example.backend.TokenServletTest" time="0.139"/>
+  <testcase name="fetchesFleetReaderToken" classname="com.example.backend.TokenServletTest" time="0.193"/>
+  <testcase name="stopsIfVehicleIdNotProvidedWhenFetchingDeliveryDriverToken" classname="com.example.backend.TokenServletTest" time="0.004"/>
+  <testcase name="stopsIfVehicleIdNotProvidedWhenFetchingDeliveryConsumerToken" classname="com.example.backend.TokenServletTest" time="0.003"/>
+  <testcase name="fetchesDeliveryDriverToken" classname="com.example.backend.TokenServletTest" time="0.093"/>
+  <testcase name="stopsIfTokenTypeInvalid" classname="com.example.backend.TokenServletTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet doGet
+INFO: Found token for type delivery_consumer: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsbWZzLWNvbnN1bWVyQGdlb2Qtc3VwcG9ydC1nZW1zLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwic3ViIjoibG1mcy1jb25zdW1lckBnZW9kLXN1cHBvcnQtZ2Vtcy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vIiwiZXhwIjoxNzI2MTk0OTcwLCJpYXQiOjE3MjYxOTEzNzAsImF1dGhvcml6YXRpb24iOnsidHJhY2tpbmdpZCI6ImZha2VfdHJhY2tpbmdfaWQifX0.IeDwVdRGB-sKOdHvLSVD2cdLk913s8uF2MFfHq4ke_KePvrZpNyCg34dpZBIc4ZlPsPVEBQnKHmm6D_4yMsr8yQlPaCxivpsIjNXPv7h__NvMaOq-9Ei0bH7gfpL1bcX3Gx6AmJcJylzJJu6RA5M1ZFG-Hwc6IlROlbe1G6tYYBU_VSEojOkF1POUkE7Wr8xcrMXtWSpfYr_qeLsYvf6pu6MwJanHA85xiHIwHl6NKrGEda2FEt2cs24G30QHjjTy8YGzCvLHbFAEU0Fo9S7tFkCcJzz3hX3VLVipZhYihSGGBb8NQwPVmKKThCGokC4ABgHcQepatfst2b5svcqkg
+Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet doGet
+INFO: Found token for type fleet_reader: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsbWZzLWZsZWV0LXRyYWNraW5nQGdlb2Qtc3VwcG9ydC1nZW1zLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwic3ViIjoibG1mcy1mbGVldC10cmFja2luZ0BnZW9kLXN1cHBvcnQtZ2Vtcy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vIiwiZXhwIjoxNzI2MTk0OTcwLCJpYXQiOjE3MjYxOTEzNzAsImF1dGhvcml6YXRpb24iOnsidGFza2lkIjoiKiIsInRyYWNraW5naWQiOiIqIiwiZGVsaXZlcnl2ZWhpY2xlaWQiOiIqIn19.RtA9LltqdIZdLStUwOrwijbJYjIKVzspCrU4xjvq5XHjBiWD5i2J0v4fMyhtx_jnitQow_Rt8Cat9oeHOGGvhjIUEZsGK5SI27O512vWCxvwhtYZWp15M1jVKEMbhEYB-lbtY_8RBKeE6gCLuESRw7ShzeVd7ByHlFvy5u6t3-YW_1JKMqku9wI1EXgBi7Zw4LD5Q8uKlMXaR8mDUyOCtQNRdBuU6Dnn3vbS-l1KQ5cs-p5UeZd7fDhy_4e4onIycHsSuMHYWw-DNhWq9PpbF2EXvyszql1iIq_J-3igPG3Iq4bO-d7yGRSWvE8DPjl7snZwHMA8VZegwLtjj1vIrg
+Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet validateTokenId
+SEVERE: Requested token for tokenType [delivery_driver], but no ID was supplied.
+Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet validateTokenId
+SEVERE: Requested token for tokenType [delivery_consumer], but no ID was supplied.
+Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet doGet
+INFO: Found token for type delivery_driver: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsbWZzLXRydXN0ZWQtZHJpdmVyQGdlb2Qtc3VwcG9ydC1nZW1zLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwic3ViIjoibG1mcy10cnVzdGVkLWRyaXZlckBnZW9kLXN1cHBvcnQtZ2Vtcy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vIiwiZXhwIjoxNzI2MTk0OTcwLCJpYXQiOjE3MjYxOTEzNzAsImF1dGhvcml6YXRpb24iOnsiZGVsaXZlcnl2ZWhpY2xlaWQiOiJmYWtlX3ZlaGljbGVfaWQifX0.LNHfao4l62J-Spn8uWFbBSdeZgrEhYMa6dHJrQKvbe4Gf6LfK5y3X35vTE2Ol60-i0OfVY9c0Aqc9T6TwXstch0WsqzrmJ7F1PlhVOEVX8CARvvkkonj-naZ7BHO3vcujqFW0tq9CVsHam1d0rRmsv5lbOKsclpswzMuhuD_p6EwkVy45ggMFzZPYi75ELRf8ya5RaFkBHcuekCuYshcvg9r-1mJ7afbMZdLFzsOlvxt1vt3kfbzWKuYz0MidTqe7zYACg1hgR6tijeBaP_NBw4a8_vgGgfx14RODXwTZG4jwjgPlb6q2BiRU-LlfsNnHI4kM09CHcvXFH0VXk5L5A
+Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet doGet
+WARNING: Requested token for tokenType [invalid_token_type], but did not find token.
+]]></system-err>
+</testsuite>

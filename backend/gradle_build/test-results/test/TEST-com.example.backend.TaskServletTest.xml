@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.backend.TaskServletTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-09-13T01:36:09" hostname="regeter-mac.roam.internal" time="1.001">
+  <properties/>
+  <testcase name="stopsGetWhenVehicleIdIsInvalid" classname="com.example.backend.TaskServletTest" time="0.001"/>
+  <testcase name="fetchesTasks" classname="com.example.backend.TaskServletTest" time="0.003"/>
+  <testcase name="stopsPostWhenNoTaskIdIsSpecified" classname="com.example.backend.TaskServletTest" time="0.995"/>
+  <testcase name="stopsGetWhenNoVehicleIdIsSupplied" classname="com.example.backend.TaskServletTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Sep 12, 2024 6:35:54 PM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+SEVERE: *~*~*~ Previous channel ManagedChannelImpl{logId=1, target=fleetengine.googleapis.com:443} was garbage collected without being shut down! ~*~*~*
+    Make sure to call shutdown()/shutdownNow()
+java.lang.RuntimeException: ManagedChannel allocation site
+	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.<init>(ManagedChannelOrphanWrapper.java:102)
+	at io.grpc.internal.ManagedChannelOrphanWrapper.<init>(ManagedChannelOrphanWrapper.java:60)
+	at io.grpc.internal.ManagedChannelOrphanWrapper.<init>(ManagedChannelOrphanWrapper.java:51)
+	at io.grpc.internal.ManagedChannelImplBuilder.build(ManagedChannelImplBuilder.java:709)
+	at io.grpc.ForwardingChannelBuilder2.build(ForwardingChannelBuilder2.java:272)
+	at com.example.backend.auth.grpcservice.AuthenticatedGrpcServiceProviderImpl.<init>(AuthenticatedGrpcServiceProviderImpl.java:30)
+	at com.example.backend.auth.grpcservice.AuthenticatedGrpcServiceProviderImpl$$FastClassByGuice$$48c40.GUICE$TRAMPOLINE(<generated>)
+	at com.example.backend.auth.grpcservice.AuthenticatedGrpcServiceProviderImpl$$FastClassByGuice$$48c40.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:91)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.FactoryProxy.get(FactoryProxy.java:60)
+	at com.google.inject.internal.SingleParameterInjector.inject(SingleParameterInjector.java:40)
+	at com.google.inject.internal.SingleParameterInjector.getAll(SingleParameterInjector.java:60)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:113)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:91)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:72)
+	at com.google.inject.internal.InjectorImpl.injectMembers(InjectorImpl.java:1109)
+	at com.example.backend.BackendConfigServletTest.setUp(BackendConfigServletTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+Sep 12, 2024 6:35:55 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/deliveryVehicles/vehicle_1_1726191354773"
+last_location {
+  location {
+    latitude: 37.4231623
+    longitude: -122.0925322
+  }
+  server_time {
+    seconds: 1726191355
+    nanos: 407202000
+  }
+}
+type: AUTO
+
+Sep 12, 2024 6:35:56 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_1_1726191354773"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_1_1726191354773"
+planned_location {
+  point {
+    latitude: 37.41937
+    longitude: -122.08882
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:57 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_2_1726191354773"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_2_1726191354773"
+planned_location {
+  point {
+    latitude: 37.41965
+    longitude: -122.08806
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:58 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_3_1726191354773"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_3_1726191354773"
+planned_location {
+  point {
+    latitude: 37.41857
+    longitude: -122.08781
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:59 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_4_1726191354773"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_4_1726191354773"
+planned_location {
+  point {
+    latitude: 37.41975
+    longitude: -122.08195
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:36:00 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_5_1726191354773"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_5_1726191354773"
+planned_location {
+  point {
+    latitude: 37.41911
+    longitude: -122.08188
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:36:01 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_6_1726191354773"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_6_1726191354773"
+planned_location {
+  point {
+    latitude: 37.41928
+    longitude: -122.08147
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:36:02 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_7_1726191354773"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_7_1726191354773"
+planned_location {
+  point {
+    latitude: 37.4258363
+    longitude: -122.0722928
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:36:06 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_8_1726191354773"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_8_1726191354773"
+planned_location {
+  point {
+    latitude: 37.4258363
+    longitude: -122.0722928
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:36:07 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_9_1726191354773"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_9_1726191354773"
+planned_location {
+  point {
+    latitude: 37.4182488
+    longitude: -122.0733413
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:36:09 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: org.springframework.mock.web.MockHttpServletResponse@22bdb1d0
+Sep 12, 2024 6:36:09 PM com.example.backend.TaskServlet doGet
+WARNING: The client requested tasks for a non-existent vehicle.
+Sep 12, 2024 6:36:09 PM com.example.backend.TaskServletTest fetchesTasks
+INFO: vehicle_1_1726191354773
+Sep 12, 2024 6:36:10 PM com.example.backend.TaskServlet doGet
+WARNING: The client requested tasks but did not supply a vehicleId.
+]]></system-err>
+</testsuite>

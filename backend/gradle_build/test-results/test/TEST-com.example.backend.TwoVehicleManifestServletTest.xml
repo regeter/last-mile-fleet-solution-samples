@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.backend.TwoVehicleManifestServletTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-13T01:36:20" hostname="regeter-mac.roam.internal" time="0.003">
+  <properties/>
+  <testcase name="assignsClientsToTwoVehicles" classname="com.example.backend.TwoVehicleManifestServletTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Sep 12, 2024 6:36:11 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/deliveryVehicles/vehicle_1_1726191370596"
+last_location {
+  location {
+    latitude: 37.4231623
+    longitude: -122.0925322
+  }
+  server_time {
+    seconds: 1726191371
+    nanos: 126676000
+  }
+}
+type: AUTO
+
+Sep 12, 2024 6:36:12 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/vehicle_1_task_1_1726191370596"
+type: DELIVERY
+state: OPEN
+tracking_id: "vehicle_1_tracking_1_1726191370596"
+planned_location {
+  point {
+    latitude: 37.41937
+    longitude: -122.08882
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:36:14 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/deliveryVehicles/vehicle_2_1726191370596"
+last_location {
+  location {
+    latitude: 37.4231623
+    longitude: -122.0925322
+  }
+  server_time {
+    seconds: 1726191374
+    nanos: 529732000
+  }
+}
+type: AUTO
+
+Sep 12, 2024 6:36:19 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/vehicle_2_task_1_1726191370596"
+type: PICKUP
+state: OPEN
+tracking_id: "vehicle_2_tracking_1_1726191370596"
+planned_location {
+  point {
+    latitude: 37.41975
+    longitude: -122.08195
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:36:20 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: org.springframework.mock.web.MockHttpServletResponse@ef718de
+Sep 12, 2024 6:36:20 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId (vehicle_1_1726191370596)
+Sep 12, 2024 6:36:20 PM com.example.backend.ManifestServlet doPost
+INFO: clientId is TEST_CLIENT_ID
+Sep 12, 2024 6:36:20 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191370596
+Sep 12, 2024 6:36:20 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191370596
+Sep 12, 2024 6:36:20 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId ()
+Sep 12, 2024 6:36:20 PM com.example.backend.ManifestServlet doPost
+INFO: clientId is ANOTHER_CLIENT_ID
+Sep 12, 2024 6:36:20 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_2_1726191370596
+Sep 12, 2024 6:36:20 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_2_1726191370596
+]]></system-err>
+</testsuite>

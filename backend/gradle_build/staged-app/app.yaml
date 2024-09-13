@@ -1,0 +1,27 @@
+runtime: java17
+inbound_services:
+- warmup
+auto_id_policy: default
+handlers:
+- url: (/.*/)
+  static_files: __static__/html\1index.html
+  upload: __NOT_USED__
+  require_matching_file: True
+  login: optional
+  secure: optional
+- url: (/)
+  static_files: __static__/html\1index.html
+  upload: __NOT_USED__
+  require_matching_file: True
+  login: optional
+  secure: optional
+- url: (/.*\.html)
+  static_files: __static__/html\1
+  upload: __NOT_USED__
+  require_matching_file: True
+  login: optional
+  secure: optional
+- url: /.*
+  script: unused
+  login: optional
+  secure: optional

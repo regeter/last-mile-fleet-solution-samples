@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.backend.ManifestServletTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2024-09-13T01:35:47" hostname="regeter-mac.roam.internal" time="7.679">
+  <properties/>
+  <testcase name="fixedOrder_01_stopsAssignmentWhenNoClientIdIsSupplied" classname="com.example.backend.ManifestServletTest" time="0.004"/>
+  <testcase name="fixedOrder_02_stopsAssignmentWhenVehicleIdIsInvalid" classname="com.example.backend.ManifestServletTest" time="0.003"/>
+  <testcase name="fixedOrder_10_assignsClientToVehicle" classname="com.example.backend.ManifestServletTest" time="0.011"/>
+  <testcase name="fixedOrder_11_stopsAssignmentWhenOtherClientAttemptsToAssignSameVehicle" classname="com.example.backend.ManifestServletTest" time="0.002"/>
+  <testcase name="fixedOrder_12_stopsAssignmentWhenOtherClientAttemptsToAssignAnyOtherVehicle" classname="com.example.backend.ManifestServletTest" time="0.0"/>
+  <testcase name="fixedOrder_13_stopsAssignmentWhenClientAttemptsToAssignAnotherVehicle" classname="com.example.backend.ManifestServletTest" time="0.001"/>
+  <testcase name="fixedOrder_14_returnsAssignmentWhenClientAttemptsToAssignAnyVehicle" classname="com.example.backend.ManifestServletTest" time="0.002"/>
+  <testcase name="fixedOrder_15_returnsAssignmentWhenClientAttemptsToAssignSameVehicle" classname="com.example.backend.ManifestServletTest" time="0.002"/>
+  <testcase name="fixedOrder_20_stopOrderIsCorrect" classname="com.example.backend.ManifestServletTest" time="0.01"/>
+  <testcase name="fixedOrder_21_reordersStops" classname="com.example.backend.ManifestServletTest" time="1.384"/>
+  <testcase name="fixedOrder_22_stopsWhenStopReorederingContainsInvalidStopId" classname="com.example.backend.ManifestServletTest" time="0.004"/>
+  <testcase name="fixedOrder_30_setsStopState" classname="com.example.backend.ManifestServletTest" time="1.304"/>
+  <testcase name="fixedOrder_40_removesStop" classname="com.example.backend.ManifestServletTest" time="1.322"/>
+  <testcase name="fixedOrder_50_removesStopAndUpdatesStopState" classname="com.example.backend.ManifestServletTest" time="2.352"/>
+  <testcase name="fixedOrder_51_reordersFirstTwoStops" classname="com.example.backend.ManifestServletTest" time="1.267"/>
+  <testcase name="fixedOrder_99_verifiesStopsList" classname="com.example.backend.ManifestServletTest" time="0.003"/>
+  <testcase name="getReturnsManifest" classname="com.example.backend.ManifestServletTest" time="0.002"/>
+  <testcase name="stopsGetWhenNoVehicleIdIsSupplied" classname="com.example.backend.ManifestServletTest" time="0.001"/>
+  <testcase name="stopsGetWhenVehicleIdIsInvalid" classname="com.example.backend.ManifestServletTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Sep 12, 2024 6:35:24 PM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+SEVERE: *~*~*~ Previous channel ManagedChannelImpl{logId=5, target=fleetengine.googleapis.com:443} was garbage collected without being shut down! ~*~*~*
+    Make sure to call shutdown()/shutdownNow()
+java.lang.RuntimeException: ManagedChannel allocation site
+	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.<init>(ManagedChannelOrphanWrapper.java:102)
+	at io.grpc.internal.ManagedChannelOrphanWrapper.<init>(ManagedChannelOrphanWrapper.java:60)
+	at io.grpc.internal.ManagedChannelOrphanWrapper.<init>(ManagedChannelOrphanWrapper.java:51)
+	at io.grpc.internal.ManagedChannelImplBuilder.build(ManagedChannelImplBuilder.java:709)
+	at io.grpc.ForwardingChannelBuilder2.build(ForwardingChannelBuilder2.java:272)
+	at com.example.backend.auth.grpcservice.AuthenticatedGrpcServiceProviderImpl.<init>(AuthenticatedGrpcServiceProviderImpl.java:30)
+	at com.example.backend.auth.grpcservice.AuthenticatedGrpcServiceProviderImpl$$FastClassByGuice$$48c40.GUICE$TRAMPOLINE(<generated>)
+	at com.example.backend.auth.grpcservice.AuthenticatedGrpcServiceProviderImpl$$FastClassByGuice$$48c40.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:91)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.FactoryProxy.get(FactoryProxy.java:60)
+	at com.google.inject.internal.SingleParameterInjector.inject(SingleParameterInjector.java:40)
+	at com.google.inject.internal.SingleParameterInjector.getAll(SingleParameterInjector.java:60)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:113)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:91)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:50)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:146)
+	at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:101)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:72)
+	at com.google.inject.internal.InjectorImpl.injectMembers(InjectorImpl.java:1109)
+	at com.example.backend.BackendConfigServletTest.setUp(BackendConfigServletTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+Sep 12, 2024 6:35:24 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/deliveryVehicles/vehicle_1_1726191324112"
+last_location {
+  location {
+    latitude: 37.4231623
+    longitude: -122.0925322
+  }
+  server_time {
+    seconds: 1726191324
+    nanos: 617688000
+  }
+}
+type: AUTO
+
+Sep 12, 2024 6:35:25 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_1_1726191324112"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_1_1726191324112"
+planned_location {
+  point {
+    latitude: 37.41937
+    longitude: -122.08882
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:26 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_2_1726191324112"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_2_1726191324112"
+planned_location {
+  point {
+    latitude: 37.41965
+    longitude: -122.08806
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:27 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_3_1726191324112"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_3_1726191324112"
+planned_location {
+  point {
+    latitude: 37.41857
+    longitude: -122.08781
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:28 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_4_1726191324112"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_4_1726191324112"
+planned_location {
+  point {
+    latitude: 37.41975
+    longitude: -122.08195
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:32 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_5_1726191324112"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_5_1726191324112"
+planned_location {
+  point {
+    latitude: 37.41911
+    longitude: -122.08188
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:36 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_6_1726191324112"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_6_1726191324112"
+planned_location {
+  point {
+    latitude: 37.41928
+    longitude: -122.08147
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:40 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_7_1726191324112"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_7_1726191324112"
+planned_location {
+  point {
+    latitude: 37.4258363
+    longitude: -122.0722928
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:41 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_8_1726191324112"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_8_1726191324112"
+planned_location {
+  point {
+    latitude: 37.4258363
+    longitude: -122.0722928
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:45 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_9_1726191324112"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_9_1726191324112"
+planned_location {
+  point {
+    latitude: 37.4182488
+    longitude: -122.0733413
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:47 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: org.springframework.mock.web.MockHttpServletResponse@610d28b8
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId ()
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+WARNING: The client requested a manifest update but did not supply a valid update.
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId (INVALID_VEHICLE_ID)
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: clientId is TEST_CLIENT_ID
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+WARNING: The client attempted to request a non-existent vehicle
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId ()
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: clientId is TEST_CLIENT_ID
+Sep 12, 2024 6:35:47 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:47 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId (vehicle_1_1726191324112)
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: clientId is OTHER_TEST_CLIENT_ID
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+WARNING: The client attempted to request a vehicle that is currently assigned
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId ()
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: clientId is OTHER_TEST_CLIENT_ID
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+WARNING: The client requested a vehicle for assignment, but none were available.
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId (some_other_vehicle_id)
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: clientId is TEST_CLIENT_ID
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+WARNING: The client attempted to re-request another vehicle
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId ()
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: clientId is TEST_CLIENT_ID
+Sep 12, 2024 6:35:47 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId (vehicle_1_1726191324112)
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: clientId is TEST_CLIENT_ID
+Sep 12, 2024 6:35:47 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:47 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId (vehicle_1_1726191324112)
+Sep 12, 2024 6:35:47 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:48 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:48 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId (vehicle_1_1726191324112)
+Sep 12, 2024 6:35:48 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:48 PM com.example.backend.ManifestServlet doPost
+WARNING: The update request contained a stopId that isn't in the original set
+Sep 12, 2024 6:35:48 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId (vehicle_1_1726191324112)
+Sep 12, 2024 6:35:49 PM com.example.backend.ManifestServlet updateVehicleStopState
+INFO: updating manifest with vehicle ID vehicle_1_1726191324112 and stop state ARRIVED
+Sep 12, 2024 6:35:49 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:49 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:49 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId (vehicle_1_1726191324112)
+Sep 12, 2024 6:35:49 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:51 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:51 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId (vehicle_1_1726191324112)
+Sep 12, 2024 6:35:51 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:53 PM com.example.backend.ManifestServlet updateVehicleStopState
+INFO: updating manifest with vehicle ID vehicle_1_1726191324112 and stop state ENROUTE
+Sep 12, 2024 6:35:53 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:53 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:53 PM com.example.backend.ManifestServlet doPost
+INFO: manifest post with vehicleId (vehicle_1_1726191324112)
+Sep 12, 2024 6:35:53 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:54 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:54 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:54 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for vehicle_1_1726191324112
+Sep 12, 2024 6:35:54 PM com.example.backend.ManifestServlet doGet
+WARNING: The client attempted to get a vehicle without specifying its ID
+Sep 12, 2024 6:35:54 PM com.example.backend.ServletState getManifest
+INFO: getting manifest for invalid_vehicle_id
+Sep 12, 2024 6:35:54 PM com.example.backend.ManifestServlet doGet
+WARNING: The client attempted to retrieve the manifest for a non-existent vehicle
+]]></system-err>
+</testsuite>

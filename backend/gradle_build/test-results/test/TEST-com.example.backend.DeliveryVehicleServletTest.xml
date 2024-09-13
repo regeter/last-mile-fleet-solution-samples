@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.backend.DeliveryVehicleServletTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-09-13T01:35:24" hostname="regeter-mac.roam.internal" time="0.02">
+  <properties/>
+  <testcase name="stopsGetWhenVehicleIdIsInvalid" classname="com.example.backend.DeliveryVehicleServletTest" time="0.017"/>
+  <testcase name="stopPostWhenVehicleIdIsInvalid" classname="com.example.backend.DeliveryVehicleServletTest" time="0.002"/>
+  <testcase name="stopsPostWhenNoVehicleIdIsSupplied" classname="com.example.backend.DeliveryVehicleServletTest" time="0.0"/>
+  <testcase name="stopsGetWhenNoVehicleIdIsSupplied" classname="com.example.backend.DeliveryVehicleServletTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Sep 12, 2024 6:34:54 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/deliveryVehicles/vehicle_1_1726191294113"
+last_location {
+  location {
+    latitude: 37.4231623
+    longitude: -122.0925322
+  }
+  server_time {
+    seconds: 1726191294
+    nanos: 653234000
+  }
+}
+type: AUTO
+
+Sep 12, 2024 6:34:59 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_1_1726191294113"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_1_1726191294113"
+planned_location {
+  point {
+    latitude: 37.41937
+    longitude: -122.08882
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:02 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_2_1726191294113"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_2_1726191294113"
+planned_location {
+  point {
+    latitude: 37.41965
+    longitude: -122.08806
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:07 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_3_1726191294113"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_3_1726191294113"
+planned_location {
+  point {
+    latitude: 37.41857
+    longitude: -122.08781
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:08 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_4_1726191294113"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_4_1726191294113"
+planned_location {
+  point {
+    latitude: 37.41975
+    longitude: -122.08195
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:12 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_5_1726191294113"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_5_1726191294113"
+planned_location {
+  point {
+    latitude: 37.41911
+    longitude: -122.08188
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:13 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_6_1726191294113"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_6_1726191294113"
+planned_location {
+  point {
+    latitude: 37.41928
+    longitude: -122.08147
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:18 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_7_1726191294113"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_7_1726191294113"
+planned_location {
+  point {
+    latitude: 37.4258363
+    longitude: -122.0722928
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:18 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_8_1726191294113"
+type: DELIVERY
+state: OPEN
+tracking_id: "tracking_8_1726191294113"
+planned_location {
+  point {
+    latitude: 37.4258363
+    longitude: -122.0722928
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:22 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: name: "providers/geod-support-gems/tasks/task_9_1726191294113"
+type: PICKUP
+state: OPEN
+tracking_id: "tracking_9_1726191294113"
+planned_location {
+  point {
+    latitude: 37.4182488
+    longitude: -122.0733413
+  }
+}
+task_duration {
+  seconds: 60
+}
+
+Sep 12, 2024 6:35:24 PM com.example.backend.BackendConfigServlet serveUpload
+INFO: org.springframework.mock.web.MockHttpServletResponse@4eaa375c
+Sep 12, 2024 6:35:24 PM com.example.backend.DeliveryVehicleServlet doGet
+WARNING: The client attempted to request a non-existent vehicle
+Sep 12, 2024 6:35:24 PM com.example.backend.DeliveryVehicleServlet doPost
+WARNING: The client requested a delivery vehicle update, but the vehicle ID fake_vehicle_id does not match any vehicle.
+Sep 12, 2024 6:35:24 PM com.example.backend.DeliveryVehicleServlet doPost
+WARNING: The client requested a delivery vehicle update but did not supply a vehicleId.
+Sep 12, 2024 6:35:24 PM com.example.backend.DeliveryVehicleServlet doGet
+WARNING: The client attempted to get a vehicle without specifying its ID
+]]></system-err>
+</testsuite>

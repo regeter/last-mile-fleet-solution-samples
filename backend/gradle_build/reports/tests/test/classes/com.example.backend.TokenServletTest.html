@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.example.backend.TokenServletTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.example.backend.TokenServletTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.backend.html">com.example.backend</a> &gt; TokenServletTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.434s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">fetchesDeliveryConsumerToken</td>
+<td class="success">0.139s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">fetchesDeliveryDriverToken</td>
+<td class="success">0.093s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">fetchesFleetReaderToken</td>
+<td class="success">0.193s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">stopsIfTokenTypeInvalid</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">stopsIfVehicleIdNotProvidedWhenFetchingDeliveryConsumerToken</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">stopsIfVehicleIdNotProvidedWhenFetchingDeliveryDriverToken</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet doGet
+INFO: Found token for type delivery_consumer: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsbWZzLWNvbnN1bWVyQGdlb2Qtc3VwcG9ydC1nZW1zLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwic3ViIjoibG1mcy1jb25zdW1lckBnZW9kLXN1cHBvcnQtZ2Vtcy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vIiwiZXhwIjoxNzI2MTk0OTcwLCJpYXQiOjE3MjYxOTEzNzAsImF1dGhvcml6YXRpb24iOnsidHJhY2tpbmdpZCI6ImZha2VfdHJhY2tpbmdfaWQifX0.IeDwVdRGB-sKOdHvLSVD2cdLk913s8uF2MFfHq4ke_KePvrZpNyCg34dpZBIc4ZlPsPVEBQnKHmm6D_4yMsr8yQlPaCxivpsIjNXPv7h__NvMaOq-9Ei0bH7gfpL1bcX3Gx6AmJcJylzJJu6RA5M1ZFG-Hwc6IlROlbe1G6tYYBU_VSEojOkF1POUkE7Wr8xcrMXtWSpfYr_qeLsYvf6pu6MwJanHA85xiHIwHl6NKrGEda2FEt2cs24G30QHjjTy8YGzCvLHbFAEU0Fo9S7tFkCcJzz3hX3VLVipZhYihSGGBb8NQwPVmKKThCGokC4ABgHcQepatfst2b5svcqkg
+Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet doGet
+INFO: Found token for type fleet_reader: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsbWZzLWZsZWV0LXRyYWNraW5nQGdlb2Qtc3VwcG9ydC1nZW1zLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwic3ViIjoibG1mcy1mbGVldC10cmFja2luZ0BnZW9kLXN1cHBvcnQtZ2Vtcy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vIiwiZXhwIjoxNzI2MTk0OTcwLCJpYXQiOjE3MjYxOTEzNzAsImF1dGhvcml6YXRpb24iOnsidGFza2lkIjoiKiIsInRyYWNraW5naWQiOiIqIiwiZGVsaXZlcnl2ZWhpY2xlaWQiOiIqIn19.RtA9LltqdIZdLStUwOrwijbJYjIKVzspCrU4xjvq5XHjBiWD5i2J0v4fMyhtx_jnitQow_Rt8Cat9oeHOGGvhjIUEZsGK5SI27O512vWCxvwhtYZWp15M1jVKEMbhEYB-lbtY_8RBKeE6gCLuESRw7ShzeVd7ByHlFvy5u6t3-YW_1JKMqku9wI1EXgBi7Zw4LD5Q8uKlMXaR8mDUyOCtQNRdBuU6Dnn3vbS-l1KQ5cs-p5UeZd7fDhy_4e4onIycHsSuMHYWw-DNhWq9PpbF2EXvyszql1iIq_J-3igPG3Iq4bO-d7yGRSWvE8DPjl7snZwHMA8VZegwLtjj1vIrg
+Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet validateTokenId
+SEVERE: Requested token for tokenType [delivery_driver], but no ID was supplied.
+Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet validateTokenId
+SEVERE: Requested token for tokenType [delivery_consumer], but no ID was supplied.
+Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet doGet
+INFO: Found token for type delivery_driver: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsbWZzLXRydXN0ZWQtZHJpdmVyQGdlb2Qtc3VwcG9ydC1nZW1zLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwic3ViIjoibG1mcy10cnVzdGVkLWRyaXZlckBnZW9kLXN1cHBvcnQtZ2Vtcy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vIiwiZXhwIjoxNzI2MTk0OTcwLCJpYXQiOjE3MjYxOTEzNzAsImF1dGhvcml6YXRpb24iOnsiZGVsaXZlcnl2ZWhpY2xlaWQiOiJmYWtlX3ZlaGljbGVfaWQifX0.LNHfao4l62J-Spn8uWFbBSdeZgrEhYMa6dHJrQKvbe4Gf6LfK5y3X35vTE2Ol60-i0OfVY9c0Aqc9T6TwXstch0WsqzrmJ7F1PlhVOEVX8CARvvkkonj-naZ7BHO3vcujqFW0tq9CVsHam1d0rRmsv5lbOKsclpswzMuhuD_p6EwkVy45ggMFzZPYi75ELRf8ya5RaFkBHcuekCuYshcvg9r-1mJ7afbMZdLFzsOlvxt1vt3kfbzWKuYz0MidTqe7zYACg1hgR6tijeBaP_NBw4a8_vgGgfx14RODXwTZG4jwjgPlb6q2BiRU-LlfsNnHI4kM09CHcvXFH0VXk5L5A
+Sep 12, 2024 6:36:10 PM com.example.backend.TokenServlet doGet
+WARNING: Requested token for tokenType [invalid_token_type], but did not find token.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.4</a> at Sep 12, 2024, 6:36:20 PM</p>
+</div>
+</div>
+</body>
+</html>
